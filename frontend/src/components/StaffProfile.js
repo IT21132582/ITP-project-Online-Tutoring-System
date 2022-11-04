@@ -54,7 +54,7 @@ export default function ProfilePage() {
           </div>
         </div>
       </div>
-      <a
+      {/* <a
         href="/addtimetable"
         button
         type="button"
@@ -67,7 +67,7 @@ export default function ProfilePage() {
         }}
       >
         Add Timetable
-      </a>{" "}
+      </a>{" "} */}
       <br />
       <br />
       <br />

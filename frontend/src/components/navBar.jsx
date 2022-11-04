@@ -69,6 +69,11 @@ const NavBar = ({ user }) => {
                 Staff Profile
               </NavLink>
             </li>
+            <li className="nav-item">
+              <NavLink className="nav-link" to="/Grades">
+                Class-Schedules
+              </NavLink>
+            </li>
             {/* <div className="loginNav"> */}
             {!user && (
               <React.Fragment>

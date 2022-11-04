@@ -17,13 +17,35 @@ import Enroll from "./components/enroll";
 import homePage from "./components/homePage";
 import myCourses from "./components/myCourses";
 import Promotion from "./components/promotion";
+import auth from "./services/authService";
+import "react-toastify/dist/ReactToastify.css";
+import "./App.css";
+
+//Achini
 import Achini from "./components/achinitest";
 import AddNotice from "./components/AddNotice";
 import ListNotice from "./components/ListNotice";
 import staffProfile from "./components/StaffProfile";
-import auth from "./services/authService";
-import "react-toastify/dist/ReactToastify.css";
-import "./App.css";
+import EditNotice from "./components/EditNotice";
+
+import ListTimetable from "./components/ListTimetable";
+import EditTimetable from "./components/EditTimetable";
+
+import ListEmployee from "./components/ListEmployee";
+import AddEmployee from "./components/AddEmployee";
+import EditEmployee from "./components/EditEmployee";
+import AddTimetable from "./components/AddTimetable";
+
+import UpdateNotice from "./components/updateNotice";
+import Grade6 from "./components/Grade06";
+import Grade7 from "./components/Grade07";
+import Grade8 from "./components/Grade08";
+import Grade9 from "./components/Grade09";
+import Grade10 from "./components/Grade10";
+import Grades from "./components/Grades";
+import Grade11 from "./components/Grade11";
+import AllEmployees from "./components/report";
+//Achini
 
 //pasindu
 import AddStudent from "./components/addStudent";
@@ -82,9 +104,25 @@ class App extends Component {
             <Route path="/classReport" component={classReport}></Route>
             <Route path="/homePage" component={homePage}></Route>
             <Route path="/promotion" component={Promotion}></Route>
+            //Achini
             <Route path="/AddNotice" component={AddNotice}></Route>
             <Route path="/achinitest" component={staffProfile}></Route>
             <Route path="/not-found" component={NotFound}></Route>
+            <Route path="/list" component={ListEmployee} />
+            <Route path="/addemployee" component={AddEmployee} />
+            <Route path="/editEmployee/:id" component={EditEmployee} />
+            <Route path="/addtimetable" component={AddTimetable} />
+            <Route path="/get" component={ListTimetable} />
+            <Route path="/editTimetable/:id" component={EditTimetable} />
+            <Route path="/updateNotice" component={UpdateNotice} />
+            <Route path="/Grade06" component={Grade6} />
+            <Route path="/Grade07" component={Grade7} />
+            <Route path="/Grade08" component={Grade8} />
+            <Route path="/Grade09" component={Grade9} />
+            <Route path="/Grade10" component={Grade10} />
+            <Route path="/Grade11" component={Grade11} />
+            <Route path="/Grades" component={Grades} />
+            <Route path="/report" component={AllEmployees} />
             //pasindu
             <Route path="/loginselect" component={LoginSelection} />
             <Route path="/logout" component={homePage} />
