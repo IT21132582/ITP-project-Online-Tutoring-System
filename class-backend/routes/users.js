@@ -17,7 +17,6 @@ router.get("/getuser/:id", async (req, res) => {
 
     .exec();
 
-  console.log(user);
   res.send(user);
 });
 
@@ -67,4 +66,27 @@ router.get("/enroll/:id", async (req, res) => {
 
   res.send(user);
 });
+
+router.delete("/enroll/:id/:course", async (req, res) => {
+  const { courseId } = req.body;
+
+  console.log(req.params.course);
+
+  const user = await User.findById(req.params.id);
+
+  if (!user) return res.status(400).send("User does not exist.");
+
+  const indexOfObject = user.myCourses.findIndex((object) => {
+    return object._id === req.params.course;
+  });
+
+  console.log(indexOfObject); // 👉️ 1
+
+  user.myCourses.splice(indexOfObject, 1);
+
+  await user.save();
+
+  res.send("course removed");
+});
+
 module.exports = router;

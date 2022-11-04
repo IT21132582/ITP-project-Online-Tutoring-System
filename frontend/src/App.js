@@ -66,6 +66,10 @@ import AllFeedback from "./components/feedbacksAll";
 import AllStudents from "./components/allStudents";
 //pasindu
 
+//Dewmi
+import UploadTutorial from "./components/uploadTutorial";
+//Dewmi
+
 class App extends Component {
   state = {};
 
@@ -138,6 +142,9 @@ class App extends Component {
             <Route path="/paymentGateway" component={PaymentGatway} />
             <Route path="/allStudents" component={AllStudents} />
             //pasindu
+            //Dewmi
+            <Route path="/UploadTutorial" component={UploadTutorial} />
+            //Dewmi
             <Redirect from="/" exact to="/homePage" />
             <Redirect to="/not-found" />
           </Switch>

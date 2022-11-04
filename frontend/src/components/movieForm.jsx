@@ -5,6 +5,8 @@ import Form from "./common/form";
 import { getMovie, saveMovie } from "../services/movieService";
 import { getGenres } from "../services/genreService";
 import Swal from "sweetalert2";
+import { Link } from "react-router-dom";
+import UploadTutorial from './uploadTutorial';
 
 class MovieForm extends Form {
   state = {
@@ -113,6 +115,13 @@ class MovieForm extends Form {
           )}
           {auth.getCurrentUser().isAdmin && this.renderButton("Save")}
         </form>
+        <br></br>
+        <br></br>
+        <Link to="/UploadTutorial">
+        <button className="btn btn-success" >
+          uploadTutorial
+        </button>
+      </Link>
       </div>
     );
   }

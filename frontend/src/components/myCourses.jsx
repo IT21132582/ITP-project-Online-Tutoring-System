@@ -1,4 +1,4 @@
-import { getCourse } from "../services/enrollService";
+import { getCourse, UnEnroll } from "../services/enrollService";
 import React, { useEffect, useState } from "react";
 import jsPDF from "jspdf";
 import autoTable from "jspdf-autotable";
@@ -9,7 +9,6 @@ const MyCourse = () => {
   const fetchCourses = async () => {
     const res = await getCourse(window.location.pathname.split("/")[2]);
     setCourses(res.data.myCourses);
-    console.log(res.data.myCourses);
   };
 
   useEffect(() => {
@@ -21,7 +20,7 @@ const MyCourse = () => {
   {
     Courses.map((item, key) => {
       const course = { ...item.courseId };
-      console.log(course);
+
       info.push([course.title, course.numberInStock, course.dailyRentalRate]);
     });
   }
@@ -40,6 +39,17 @@ const MyCourse = () => {
       doc.save("enrolltest.pdf");
     }
   };
+  //handledelete
+  const handleDelete = async (id) => {
+    console.log(id);
+    const res = await UnEnroll(
+      window.location.pathname.split("/")[2] + "/" + id,
+      {
+        courseId: id,
+      }
+    );
+    fetchCourses();
+  };
 
   return (
     <div>
@@ -54,12 +64,13 @@ const MyCourse = () => {
             {/* <th scope="col">Genre</th> */}
             <th scope="col">Capacity</th>
             <th scope="col">Course Fee</th>
+            <th scope="col"></th>
           </tr>
         </thead>
         <tbody>
           {Courses.map((item, key) => {
             const course = { ...item.courseId };
-            console.log(course);
+
             return (
               <tr>
                 <th scope="row">{key + 1}</th>
@@ -68,6 +79,15 @@ const MyCourse = () => {
                 {/* <td>{course.genre.name}</td> */}
                 <td>{course.numberInStock}</td>
                 <td>{course.dailyRentalRate}</td>
+                <td>
+                  <button
+                    onClick={() => {
+                      handleDelete(item._id);
+                    }}
+                  >
+                    Delete
+                  </button>
+                </td>
               </tr>
             );
           })}

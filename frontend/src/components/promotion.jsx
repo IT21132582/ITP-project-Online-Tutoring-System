@@ -14,8 +14,8 @@ const Promotion = () => {
             alt="First slide"
           />
           <Carousel.Caption>
-            <h3>First slide label</h3>
-            <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+            <h3>Interactive Learning</h3>
+            <p>Effective learning and interaction with the online platform</p>
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item interval={3000}>
@@ -25,8 +25,8 @@ const Promotion = () => {
             alt="Second slide"
           />
           <Carousel.Caption>
-            <h3>Second slide label</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <h3>Access to online lesson repository</h3>
+            <p>Gain access to online lesson repository and get along with studies at ease</p>
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item interval={3000}>
@@ -36,9 +36,9 @@ const Promotion = () => {
             alt="Third slide"
           />
           <Carousel.Caption>
-            <h3>Third slide label</h3>
+            <h3>All best teachers at one place</h3>
             <p>
-              Praesent commodo cursus magna, vel scelerisque nisl consectetur.
+              All best teachers across the country to teach you the best!
             </p>
           </Carousel.Caption>
         </Carousel.Item>
@@ -52,15 +52,16 @@ const Promotion = () => {
             src="https://pbs.twimg.com/media/E2JFkAIWYAQFBZ5.jpg"
           />
           <Card.Body>
-            <Card.Title>Card title</Card.Title>
+            <Card.Title><h4 align="center">Physics Paper Class</h4></Card.Title>
             <Card.Text>
-              This is a wider card with supporting text below as a natural
-              lead-in to additional content. This content is a little bit
-              longer.
+             <h5 align="center">Nilantha Jayasuriya</h5>
+             <p>Physics online paper class for 2022 Students</p>
+             <br></br>
+             <p>12 model papers with marking schemes every week</p>
             </Card.Text>
           </Card.Body>
           <Card.Footer>
-            <small className="text-muted">Last updated 3 mins ago</small>
+            <small className="text-muted">Last updated 26 hours ago</small>
           </Card.Footer>
         </Card>
         <Card>
@@ -70,14 +71,15 @@ const Promotion = () => {
             src="https://i.ytimg.com/vi/2y0WiD_SYUM/maxresdefault.jpg"
           />
           <Card.Body>
-            <Card.Title>Card title</Card.Title>
+            <Card.Title><h4 align="center">Chemistry Revision Class</h4></Card.Title>
             <Card.Text>
-              This card has supporting text below as a natural lead-in to
-              additional content.
+            <p>Chemistry online Revision class for 2022 Students</p>
+             <br></br>
+             <p>All the lessons from the begining will be discussed</p>
             </Card.Text>
           </Card.Body>
           <Card.Footer>
-            <small className="text-muted">Last updated 3 mins ago</small>
+            <small className="text-muted">Last updated 18 hours ago</small>
           </Card.Footer>
         </Card>
         <Card>
@@ -87,15 +89,15 @@ const Promotion = () => {
             src="https://i.ytimg.com/vi/uiWGerB9k_o/maxresdefault.jpg"
           />
           <Card.Body>
-            <Card.Title>Card title</Card.Title>
+            <Card.Title><h4 align="center">Physics Speed Class</h4></Card.Title>
             <Card.Text>
-              This is a wider card with supporting text below as a natural
-              lead-in to additional content. This card has even longer content
-              than the first to show that equal height action.
+            <p>Physics online speed Revision class for 2022 Students</p>
+             <br></br>
+             <p>All the lessons from the begining will be discussed along with model papers</p>
             </Card.Text>
           </Card.Body>
           <Card.Footer>
-            <small className="text-muted">Last updated 3 mins ago</small>
+            <small className="text-muted">Last updated 10 hours ago</small>
           </Card.Footer>
         </Card>
       </CardGroup>

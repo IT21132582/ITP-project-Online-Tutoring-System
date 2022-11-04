@@ -14,3 +14,7 @@ export async function getCourse(id) {
 export async function saveEnrollment(id, course) {
   return await http.post(movieUrl(id), course);
 }
+
+export async function UnEnroll(id, course) {
+  return await http.delete(movieUrl(id), course);
+}
